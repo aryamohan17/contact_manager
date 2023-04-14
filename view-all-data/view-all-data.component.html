@@ -1,0 +1,42 @@
+<div class="container px-4 px-lg-5 mt-5">
+    <div class="row">
+        <div class="col-lg-4 col-md-12  col-sm-12"></div>
+        <div class="col-lg-4 col-md-12 col-sm-12 ms-5 mt-5">
+            <h2>  <a href="/addData">Add contact</a> </h2> 
+
+        </div>
+        <div class="col-lg-4 col-md-12 col-sm-12 ">
+    
+        </div>
+    
+      </div>
+    <div class="row mt-3 gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+
+        <div *ngFor="let i of dataList | filter:searchKey:'contactName'" class="col mb-5">
+            <div class="card h-100">
+                <!-- Product image-->
+                <img class="card-img-top rounded-pill" height="220" width="10" src="{{i.image}}" alt="..." />
+                <!-- Product details-->
+                <div class="card-body p-4">
+                    <div class="text-center">
+                        <!-- Product name-->
+                        <h6 class="fw-bolder">Name:{{i.contactName}}</h6>
+                        <!-- Product price-->
+                        <h6 class="">Phn:{{i.contactPhn}}</h6>
+                        <h6 class="">Email:{{i.contactEmail}}</h6>
+
+
+                    </div>
+                </div>
+                <!-- Product actions-->
+                <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                    <span class="text-center"><a class="btn btn-outline-dark mt-auto" href="/viewData/{{i.id}}"><i class="fa-solid fa-eye text-success"></i></a></span>
+                    <span class="text-center ps-1"><a class="btn btn-outline-dark mt-auto" href="editData/{{i.id}}"><i class="fa-solid fa-pen-to-square text-primary"></i></a></span>
+                    <span class="text-center ps-1"><a class="btn btn-outline-dark mt-auto" href="deleteData/{{i.id}}"><i class="fa-sharp fa-solid fa-trash text-danger"></i></a></span>
+
+                
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

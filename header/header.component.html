@@ -1,0 +1,10 @@
+<nav class="navbar navbar-dark bg-primary">
+    <div class="container-fluid">
+        <img src="https://i.postimg.cc/TwN5xvz0/contact-app-icon-10.png" width="50" height="60" alt="">
+      <a class="navbar-brand">Contact Manager</a>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" [(ngModel)]="searchTerm" (keyup)="search($event)" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-secondary" type="submit"><i class="fas fa-search text-light"></i></button>
+      </form>
+    </div>
+  </nav>
